@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/login.css">
+    <title>Claytek Ceramics | Login & Registration</title>
+  </head>
+  <body>
+      <header>
+          <input type="checkbox" id="toggler">
+          <label for="toggler" class="fa fa-bars"></label>
+  
+          <div class="logo-container">
+              <div class="logo">
+                  <img src="images/LOGOLETTER2.png" alt="Logo">
+              </div>
+              <div class="navbar">
+                  <a href="index.html">Home</a>
+              </div>
+          </div>
+              
+          </nav>
+          <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-shopping-cart"></a>
+              <a href="Login.html" class="fas fa-user"></a>
+          </div>
+      </header>
+
+
+<!-----------Form box----------->
+<div class="container">
+<div class="form-box">
+
+  <!----------login form----------->
+  <div class="login-container" id="login">
+    <div class="top">
+      <span style="font-size: 18px; margin-bottom: 5px;">Don't have an account? <a href="#" onclick="login()">Sign Up</a></span>
+      <h1 style="font-size: 30px; text-align: center; margin-bottom: 15px;">Login</h1>
+    </div>
+    <div class="input-box">
+      <input type="text" class="input-field" placeholder="Username or Email">
+      <i class="bx bx-user"></i>
+    </div>
+    <div class="input-box">
+      <input type="password" class="input-field" placeholder="Password">
+      <i class="bx bx-lock-alt"></i>
+    </div>
+    <div class="input-box">
+      <input type="submit" class="submit" value="Sign In">
+    </div>
+    <div class="two-col">
+      <div class="one">
+        <input type="checkbox" id="login-check">
+        <label for="login-check">Remember Me</label>
+      </div>
+      <div class="two">
+        <label><a href="#">Forgot password?</a></label>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <!----------registration form----------->
+  <div class="register-container" id="register">
+    <div class="top">
+      <span style="font-size: 15px;">Already have an account? <a href="#" onclick="register()">Login</a></span>
+      <h1 style="font-size: 25px; text-align: center; margin-bottom: 15px;">Sign Up</h1>
+    </div>
+    <div class="two-forms">
+      <div class="input-box">
+        <input type="text" class="input-field" placeholder="Firstname">
+        <i class="bx bx-user"></i>
+      </div>
+      <div class="input-box">
+        <input type="text" class="input-field" placeholder="Lastname">
+        <i class="bx bx-user"></i>
+      </div>
+    </div>
+    <div class="input-box">
+      <input type="text" class="input-field" placeholder="Email">
+      <i class="bx bx-envelope"></i>
+    </div>
+    <div class="input-box">
+      <input type="password" class="input-field" placeholder="Password">
+      <i class="bx bx-lock-alt"></i>
+    </div>
+    <div class="input-box">
+      <select name="user_type" class="user_type">
+        <option value="user">user</option>
+        <option value="admin">admin</option>
+      </select>
+    </div>
+    <div class="input-box">
+      <input type="submit" class="submit" value="Register">
+    </div>
+    <div class="two-col">
+      <div class="one">
+        <input type="checkbox" id="register-check">
+        <label for="register-check">Remember Me</label>
+      </div>
+      <div class="two">
+        <label><a href="#">Terms & conditions</a></label>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  var a = document.getElementById("login");
+  var b = document.getElementById("register");
+
+  function register() {
+    a.style.left = "4px";
+    b.style.right = "-520px";
+  }
+
+  function login() {
+    a.style.left = "-510px";
+    b.style.right = "5px";
+  }
+</script>
+
+
+</body>
+</html>

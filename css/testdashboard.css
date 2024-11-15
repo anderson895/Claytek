@@ -1,0 +1,229 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  
+color{
+    color: #64553b;
+    color: #b4935a;
+    color: #7b4d00;
+    color: #251904;
+    color: #e5ae34;
+    color: #ffeccc;
+    color: #f5e1c0;
+    color: #ffb942;
+    color: #c2841b;
+    color: #ffe9c7;
+
+}
+  
+  body {
+    display: flex;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #efcea9;
+    color: #392605;
+    height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    box-shadow: 0 .5rem 1rem #c0a069;
+  }
+  
+  .logoo img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .menu {
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+  }
+  
+  .menu li {
+    padding: 15px 20px;
+    color: #392605;
+    font-weight: bolder;
+  }
+  
+  .menu li.active, .menu li:hover {
+    background-color: #c4a889;
+    color: #ffffff;
+    border-left: 4px solid #392605;
+  }
+  
+  .menu li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 250px; 
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #efcea9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 .5rem 1rem #c0a069;
+  }
+  
+  .header input[type="search"] {
+    padding: 8px 15px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  .header .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .profile img {
+    border-radius: 50%;
+    width: 40px;
+    margin-left: 10px;
+  }
+  
+  /* Dashboard content */
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-shadow: 0 .5rem 1rem #c0a069;
+  }
+  
+  .card .amount {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .sales-chart {
+    grid-column: span 2;
+  }
+
+  
+  
+/* Widen the "Sales This Month" image */
+  .sales-chart img {
+   width: 100%; /* Full width of container */
+   height: auto;
+   margin-top: -150px; /* Move image up closer to heading */
+   display: block;
+   padding-bottom: 0; /* Remove any bottom padding under heading */
+
+  }
+
+/* Set size for "Product Sales" image */
+  .product-sales img {
+   width: 80%; /* Adjust to fit within its container */
+   height: auto;
+   margin: 0 auto;
+   margin-top: -150px; /* Move image up closer to heading */
+   display: block;
+   padding-bottom: 0; /* Remove any bottom padding under heading */
+  }
+
+  .chart {
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .product-sales .chart {
+    height: 150px;
+    border-radius: 100%;
+    background-color: #ffffff;
+  }
+  
+  /* Product Delivery and Stock Report */
+  .product-delivery, .stock-report {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 .5rem 1rem #c0a069;
+    margin-top: 20px;
+  }
+  
+  .product-item, .stock-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+  }
+  
+  .status {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #ffeccc;
+  }
+  
+  .delivered { background-color: green; }
+  .pending { background-color: orange; }
+  .shipping { background-color: blue; }
+  
+  .stock-status {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .in-stock { color: green; }
+  .out-of-stock { color: red; }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .main-content {
+      margin-left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .dashboard {
+      grid-template-columns: 1fr;
+    }
+  
+    .sales-chart, .product-sales {
+      grid-column: span 1;
+    }
+  
+    .header input[type="search"] {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/testdashboard.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <a href="#" class="logoo">
+        <img src="images/LIGHTlogo.png" alt="Claytek Studios Logo">
+      </a>
+    </div>
+    <ul class="menu">
+      <li class="active"><a href="#">Dashboard</a></li>
+      <li><a href="product.php">Products</a></li>
+      <li><a href="index.html">Website Homepage</a></li>
+      <li><a href="#">Customer</a></li>
+      <li><a href="#">Orders</a></li>
+      <li><a href="#">Coupons</a></li>
+      <li><a href="#">Chats</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header">
+      <input type="search" placeholder="Search something here">
+      <div class="profile">
+        <span>Administrator</span>
+        <img src="images/admin.jpg" alt="Profile">
+      </div>
+    </div>
+
+    <!-- Dashboard Overview -->
+    <div class="dashboard">
+      <div class="card">
+        <h3>Expected Monthly Earnings</h3>
+        <p class="amount">₱26850.00</p>
+      </div>
+      <div class="card">
+        <h3>Average Daily Sales</h3>
+        <p class="amount">₱3496.00</p>
+      </div>
+      <div class="card">
+        <h3>New Customers This Month</h3>
+        <p class="amount">1.1k</p>
+      </div>
+
+      <!-- Sales Chart -->
+      <div class="card sales-chart">
+        <h3>Sales This Month</h3>
+        <div class="chart"></div>
+        <img src="images/longchart.png" alt="longchart">
+      </div>
+
+      <!-- Product Sales -->
+      <div class="card product-sales">
+        <h3>Product Sales</h3>
+        <div class="chart"></div>
+        <img src="images/donutchart.png" alt="donutchart">
+      </div>
+    </div>
+
+    <!-- Product Delivery and Stock Report -->
+    <div class="product-delivery">
+      <h4>Product Delivery</h4>
+      <div class="product-item">
+        <p>Ceramic Kirby mug</p>
+        <span class="status delivered">Delivered</span>
+      </div>
+      <div class="product-item">
+        <p>miniature people jewelry plate</p>
+        <span class="status pending">Pending</span>
+      </div>
+      <div class="product-item">
+        <p>pancake jar</p>
+        <span class="status shipping">Shipping</span>
+      </div>
+    </div>
+
+    <div class="stock-report">
+      <h4>Stock Report</h4>
+      <div class="stock-item">
+        <p>Ceramic Kiki's delivery service cat mug</p>
+        <span class="stock-status in-stock">In Stock</span>
+      </div>
+      <div class="stock-item">
+        <p>Ceramic yarn bowl Howl's Moving Castle Calcifer</p>
+        <span class="stock-status out-of-stock">Out of Stock</span>
+      </div>
+      <div class="stock-item">
+        <p>pokemon jewelry plate</p>
+        <span class="stock-status in-stock">In Stock</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

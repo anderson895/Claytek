@@ -1,0 +1,408 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+}
+
+color{
+    color: #64553b;
+    color: #b4935a;
+    color: #7b4d00;
+    color: #251904;
+    color: #e5ae34;
+    color: #ffeccc;
+    color: #f5e1c0;
+    color: #ffb942;
+    color: #c2841b;
+    color: #ffe9c7;
+
+}
+
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #7b4d00;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: #e3c38c;
+
+}
+
+.heading span{
+    color: #f7f0e5;
+}
+
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 6.5rem;
+    background: #bc9759;
+    color: #452f08;
+    padding: 1rem 3.5rem;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: bolder;
+
+}
+
+.btn:hover{
+    background: #ffb942 ;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffeccc;
+    display: flex;
+    padding: 2rem 9%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem #b4935a;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    
+}
+
+header .logo img {
+    width: 200px;
+    height: auto;
+}
+
+
+header .navbar a {
+    font-size: 3rem;
+    padding: 0.5rem 2rem 0.5rem 3rem; 
+    color: #7b4d00;
+    font-weight: bolder;
+    background: #bea16f;
+    color: #452f08;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin-top: 1rem;
+    margin-right: 20rem;
+    border: 0.1rem solid #7b4d00;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0 50%);
+}
+
+header .navbar a:hover {
+    color: #e5ae34;
+    background: #7b4d00;
+    border-color: #e5ae34;
+}
+
+header .icons a {
+    font-size: 3rem;
+    color: #7b4d00;
+    margin-left: 2rem;
+}
+
+header .icons a:hover {
+    color: #e5ae34;
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3.5rem;
+    color: #7b4d00;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid #7b4d00;
+    display: none;
+}
+
+
+
+
+
+
+
+/*products*/
+
+.tab-content .box-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1.5rem; 
+    width: 100%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+.tab-content .box-container .box {
+    flex: 1 1 calc(25% - 1.5rem); 
+    box-shadow: 0 .5rem 1.5rem rgba(37, 25, 4, 0.5);
+    border-radius: .5rem;
+    border: .1rem solid #452f08; 
+    position: relative;
+    background-color: #fff; 
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+.box-container img {
+    width: 100%;
+    height: auto; 
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.tab-content .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.tab-content .box-container .box .image .icons {
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.tab-content .box-container .box:hover .image .icons {
+    bottom: 0;
+}
+
+.tab-content .box-container .box .image .icons a {
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: #e9b151;
+    color: #f5e1c0;
+}
+
+.tab-content .box-container .box .image .icons a:hover {
+    background: #e5ae34;
+}
+
+.tab-content .box-container .box .image .icons .cart-btn {
+    border-left: .1rem solid #251904; 
+    border-right: .1rem solid #251904; 
+    width: 100%;
+}
+
+.tab-content .box-container .box .content h3{
+    font-size:2rem;
+    color: #452f08;
+    text-align: center;
+
+}
+
+.tab-content .box-container .box .content .price{
+    font-size: 4rem;
+    color: #c2841b;
+    font-weight: bolder;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.tab-content .box-container .box .content .price span{
+    font-size: 2rem;
+    color: #a79679;
+    font-weight: lighter;
+    text-decoration: line-through;
+    text-align: center;
+}
+
+
+
+
+
+@media (max-width: 991px) {
+    
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .Home{
+        background-position: left;
+    }
+
+    
+}
+
+
+
+@media (max-width: 768px) {
+    
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute ;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f6d89f;
+        border-top: .1rem solid #7b4d00;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff8eb;
+        border: .1rem solid #7b4d00;
+        display: block;
+    }
+
+
+
+
+
+
+
+
+    .Home .content{
+        max-width: 50rem;
+        left: 5%;
+    }
+
+    .Home .content h3{
+        font-size: 5.5rem;
+    }
+
+    .Home .content span{
+        font-size: 2.5rem ;
+    }
+
+    .Home .content p{
+        font-size: 1.5rem;
+    }
+
+
+
+
+
+
+
+
+    .icons-container .info h3 {
+        font-size: 1em; 
+    }
+
+    .icons-container .info span {
+        font-size: 1rem; 
+    }
+
+
+
+
+
+
+   
+    .tab-content .box-container .box {
+         flex: 1 1 calc(50% - 1.5rem); 
+    }
+    
+
+}
+
+
+@media (max-width: 450px) {
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+
+
+
+
+    
+.icons-container .info {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    text-align: left; 
+}
+
+.icons-container .info h3 {
+    font-size: 1rem; 
+}
+
+.icons-container .info span {
+    font-size: 1rem; 
+    padding-right: .5rem;
+}
+
+
+
+
+
+.tab-content .box-container .box {
+    flex: 1 1 100%; 
+}
+
+
+
+.Review .box-container .box .user h3{
+    font-size: 1.5rem;
+    color: #322103;
+
+}
+
+
+.Review .box-container .box .user span{
+    font-size: 1rem;
+    color: #ffb73c;
+
+}
+
+}
