@@ -3,10 +3,6 @@ include('../class.php');
 
 $db = new global_class();
 
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($_POST['requestType'] == 'AddProduct') {
 
@@ -24,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Check if the file is an image (optional)
             $check = getimagesize($_FILES['productImage']['tmp_name']);
             if ($check !== false) {
-                echo "File is an image - " . $check['mime'] . ".";
+                
                 $uploadOk = 1;
             } else {
                 echo "File is not an image.";
@@ -48,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 echo "Sorry, your file was not uploaded.";
             } else {
                 if (move_uploaded_file($_FILES['productImage']['tmp_name'], $targetFile)) {
-                    echo "The file " . htmlspecialchars($fileName) . " has been uploaded.";
+                  
                     $filename = $fileName; // Save the unique filename to the database
                 } else {
                     echo "Sorry, there was an error uploading your file.";

@@ -15,10 +15,18 @@ class global_class extends db_connect
 
         if ($query->execute()) {
             $result = $query->get_result();
+            return "success";
+        }
+    }
+    public function fetch_all_product()
+    {
+        $query = $this->conn->prepare("select * from product where prod_staus='1'");
+
+        if ($query->execute()) {
+            $result = $query->get_result();
             return $result;
         }
     }
 
 
-    
 }

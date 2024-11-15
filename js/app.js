@@ -36,7 +36,7 @@ $(document).ready(function() {
               console.log(response)
                 if(response==200){
                   $('#addProductModal').hide();
-                //   location.reload();
+                  location.reload();
                 }
             },
             error: function(xhr, status, error) {
