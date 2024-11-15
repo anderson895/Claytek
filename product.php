@@ -53,7 +53,7 @@ $db = new global_class();
 
     <!-- Dashboard Overview -->
     <div class="add-product-button">
-      <button class="btn">Add Product</button>
+      <button class="btn AddProductModal">Add Product</button>
     </div>
 
     <!-- Product Table -->
@@ -86,15 +86,43 @@ $db = new global_class();
         <br>
         <form id="frmAddProduct">
           <label for="productName">Product Name:</label>
-          <input type="text" id="productName" name="productName" required><br>
+          <input type="text" name="productName" required><br>
           <label for="productPrice">Price:</label>
-          <input type="text" id="productPrice" name="productPrice" required><br>
+          <input type="text" name="productPrice" required><br>
           <label for="productPrice">Image:</label>
-          <input type="file" id="productImage" name="productImage" required><br>
+          <input type="file" name="productImage" required><br>
           <button type="submit">Add Product</button>
         </form>
       </div>
     </div>
+
+
+
+    <div id="updateProductModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Update Product</h2>
+        <br>
+        <form id="frmUpdateProduct">
+          
+          <input type="hidden" id="productId" name="productId" required><br>
+
+
+          <label for="productName">Product Name:</label>
+          <input type="text" id="productName" name="productName" required><br>
+
+
+          <label for="productPrice">Price:</label>
+          <input type="text" id="productPrice" name="productPrice" required><br>
+
+
+          <label for="productImage">Image:</label>
+          <input type="file"  id="productImage" name="productImage"><br>
+          <button type="submit">Update Product</button>
+        </form>
+      </div>
+    </div>
+
   </div>
 
   <script src="js/app.js"></script>
