@@ -6,6 +6,7 @@
   <title>Dashboard</title>
   <link rel="stylesheet" href="css/testdashboard.css">
   <link rel="stylesheet" href="css/product.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Add jQuery -->
 </head>
 <body>
 
@@ -17,7 +18,7 @@
       </a>
     </div>
     <ul class="menu">
-      <li ><a href="#">Dashboard</a></li>
+      <li><a href="#">Dashboard</a></li>
       <li class="active"><a href="#">Products</a></li>
       <li><a href="index.html">Website Homepage</a></li>
       <li><a href="">Customer</a></li>
@@ -41,58 +42,57 @@
     </div>
 
     <!-- Dashboard Overview -->
-    
+    <div class="add-product-button">
+      <button class="btn">Add Product</button>
+    </div>
 
+    <!-- Product Table -->
+    <div class="dashboard-overview">
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Image</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-
-<!-- START ADD PRODUCT BUTTON -->
-<div class="add-product-button">
-  <button class="btn">Add Product</button>
-</div>
-<!-- END ADD PRODUCT BUTTON -->
-
-<!-- START TABLE PRODUCT -->
-<div class="dashboard-overview">
-  <div class="card">
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Status</th>
-          <th>Details</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2024-11-15</td>
-          <td>Active</td>
-          <td>Everything is running smoothly.</td>
-        </tr>
-        <tr>
-          <td>2024-11-14</td>
-          <td>Inactive</td>
-          <td>Scheduled maintenance completed.</td>
-        </tr>
-        <tr>
-          <td>2024-11-13</td>
-          <td>Active</td>
-          <td>System is operating normally.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-<!-- END TABLE PRODUCT -->
-
-
-
-
-
-
-
-
+    <!-- Modal for Add Product -->
+    <div id="addProductModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add New Product</h2>
+        <br>
+        <form id="frmAddProduct">
+          <label for="productName">Product Name:</label>
+          <input type="text" id="productName" name="productName" required><br>
+          <label for="productPrice">Price:</label>
+          <input type="text" id="productPrice" name="productPrice" required><br>
+          <label for="productPrice">Image:</label>
+          <input type="file" id="productImage" name="productImage" required><br>
+          <button type="submit">Add Product</button>
+        </form>
+      </div>
     </div>
   </div>
 
+  <script src="js/app.js"></script>
 </body>
 </html>

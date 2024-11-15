@@ -10,8 +10,8 @@ class global_class extends db_connect
     }
 
 
-    public function insert_product(){
-        $query = $this->conn->prepare("");
+    public function insert_product($productName,$productPrice,$image){
+        $query = $this->conn->prepare("INSERT INTO `product` (`prod_name`, `prod_price`, `prod_img`) VALUES ('$productName', '$productPrice', '$image')");
 
         if ($query->execute()) {
             $result = $query->get_result();
