@@ -72,6 +72,9 @@
 
 
 
+
+
+
 $(document).ready(function() {
     $('#frmAddProduct').on('submit', function(e) {
         e.preventDefault();

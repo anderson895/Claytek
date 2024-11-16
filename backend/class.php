@@ -46,6 +46,43 @@ class global_class extends db_connect
             $sql = "DELETE FROM product WHERE prod_id = $prodId";
             return $this->conn->query($sql);
         }
+
+
+
+        public function fetch_all_user($reciever) {
+            $sql = "SELECT * FROM `user` where user_id!='$reciever'";
+            return $this->conn->query($sql);
+        }
+
+        public function fetch_chat_messages($m_reciever, $sender_id) {
+            // Updated query with correct column names
+            $sql = "SELECT 
+                        message.*,
+                        reciever_details.user_img AS reciever_img,
+                        sender_details.user_img AS sender_img,
+                        reciever_details.user_fullname AS reciever_name,   -- Changed from 'user_name' to 'user_fullname'
+                        sender_details.user_fullname AS sender_name       -- Changed from 'user_name' to 'user_fullname'
+                    FROM `message`
+                    LEFT JOIN `user` AS reciever_details
+                        ON reciever_details.user_id = message.m_reciever
+                    LEFT JOIN `user` AS sender_details
+                        ON sender_details.user_id = message.m_sender
+                    WHERE message.m_reciever = $m_reciever AND message.m_sender = $sender_id || message.m_reciever = $sender_id AND message.m_sender = $m_reciever";
+            
+            // Execute the query and return the result
+            return $this->conn->query($sql);
+        }
+        
+        
+        public function send_message($senderID,$senderId, $message){
+            $query = $this->conn->prepare("INSERT INTO `message` (`m_sender`, `m_content`, `m_reciever`) VALUES ('$senderID', '$message', '$senderId')");
+    
+            if ($query->execute()) {
+                $result = $query->get_result();
+                return "success";
+            }
+        }
+        
         
         
 
