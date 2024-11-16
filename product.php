@@ -34,7 +34,7 @@ $db = new global_class();
       <li><a href="">Customer</a></li>
       <li><a href="#">Orders</a></li>
       <li><a href="#">Coupons</a></li>
-      <li><a href="#">Chats</a></li>
+      <li><a href="chat.php">Chats</a></li>
       <li><a href="#">Settings</a></li>
       <li><a href="#">Logout</a></li>
     </ul>
@@ -56,27 +56,26 @@ $db = new global_class();
       <button class="btn AddProductModal">Add Product</button>
     </div>
 
-    <!-- Product Table -->
-    <div class="dashboard-overview">
-      <div class="card">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Image</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php include "backend/end-points/product_list.php";           
-            ?>
-            
-          </tbody>
-        </table>
-      </div>
-    </div>
+  <!-- Product Table -->
+<div class="dashboard-overview">
+  <div class="card">
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Image</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php include "backend/end-points/product_list.php"; ?>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
     <!-- Modal for Add Product -->
     <div id="addProductModal" class="modal">
@@ -104,7 +103,7 @@ $db = new global_class();
         <h2>Update Product</h2>
         <br>
         <form id="frmUpdateProduct">
-          
+
           <input type="hidden" id="productId" name="productId" required><br>
 
 
