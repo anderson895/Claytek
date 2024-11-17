@@ -88,10 +88,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
 
             // Check if file size (optional)
-            if ($_FILES['productImage']['size'] > 500000) { // Adjust the size limit as needed
-                echo "Sorry, your file is too large.";
-                $uploadOk = 0;
-            }
+            // if ($_FILES['productImage']['size'] > 500000) { // Adjust the size limit as needed
+            //     echo "Sorry, your file is too large.";
+            //     $uploadOk = 0;
+            // }
 
             // Allow certain file formats (optional)
             if (!in_array($imageFileType, ['jpg', 'jpeg', 'png', 'gif', 'webp'])) {

@@ -125,6 +125,8 @@ $(document).ready(function() {
                 if(response==200){
                   $('#updateProductModal').hide();
                   location.reload();
+                }else{
+                  alert(response); 
                 }
             },
             error: function(xhr, status, error) {
